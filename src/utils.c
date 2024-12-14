@@ -6,7 +6,7 @@
 /*   By: lserrao- <lserrao-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:41:40 by lserrao-          #+#    #+#             */
-/*   Updated: 2024/12/14 15:37:55 by lserrao-         ###   ########.fr       */
+/*   Updated: 2024/12/14 15:59:08 by lserrao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*get_path(char *cmd, char **envar)
 		path = ft_strjoin(part_path, cmd);
 		free(part_path);
 		if (access(path, F_OK | X_OK) == 0)
-			return (free(paths), path);
+			return (path);
 		free(path);
 		i++;
 	}
